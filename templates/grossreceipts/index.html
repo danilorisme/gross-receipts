@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gross Receipts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/fileparser.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-lg-4" style="margin-top:10px">
+                <span class="h2">Gross Receipts</span><span class="h3" style="color: darkgray"> File Upload and Parser</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-4 content-box">
+                <form class="form-group" action="{% url 'file-upload' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.file.label_tag }}
+                        {{ form.file }}
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Upload" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-4 content-box">
+                    <span class="h4 align-middle">Total Gross Receipts: </span>
+                    <span class="h4 align-middle text-success">{{ grossreceipts }}</span>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>
