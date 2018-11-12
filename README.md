@@ -15,11 +15,10 @@ What things you need to run the application
 
 Framework and libraries used in the application
 
-```
-[Django 2.x](https://www.djangoproject.com/) - The web framework used
-[Pandas](https://pandas.pydata.org/)
-[simplejson](https://simplejson.readthedocs.io/en/latest/)
-```
+* [Django 2.x](https://www.djangoproject.com/)
+* [Pandas](https://pandas.pydata.org/)
+* [simplejson](https://simplejson.readthedocs.io/en/latest/)
+
 
 ### Running app
 
